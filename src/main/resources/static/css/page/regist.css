@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(254, 255, 247, 0.47);
+}
+
+a {
+    color: #ffffff;
+}
+
+
+.regist-header {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    background-color: #232324;
+
+}
+
+.regist-header .content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.regist-header .content img {
+    margin-top: 25px;
+    margin-left: 100px;
+    width: 400px;
+    height: 90px;
+}
+
+.regist-header .content .h3 {
+    font-size: 22px;
+    margin-top: 60px;
+    color: #ffffff;
+
+}
+
+.regist-header .content .p {
+    margin-left: 600px;
+    margin-top: 75px;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+.regist-body{
+    background: linear-gradient(to right bottom ,#100606, #1d1a1a, rgba(255, 0, 0, 0));
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.regist-form{
+    margin-left: -50px;
+}
+.form-input{
+    font-size: 25px;
+    color: #f0f0f0;
+    font-weight: 500;
+    margin: 30px 0;
+}
+.form-input input{
+    height: 30px;
+    width: 250px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.regist-form .regist-btn{
+    text-align: center;
+}
+.regist-form .regist-btn button{
+    height: 50px;
+    width: 170px;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    margin:0 10px;
+    border:2px solid white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+}
+.regist-btn button:hover{
+    background: white;
+    color: #000;
+}

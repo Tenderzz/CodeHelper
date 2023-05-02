@@ -1,0 +1,16 @@
+<!-- package -->
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+//<!-- imports -->
+
+@Controller
+public class <!-- Pagename -->Controller {
+    @RequestMapping("/<!-- pagename -->")
+    public String page(){
+        return "pages/<!-- pagename -->";
+    }
+
+    //<!--methods-->
+
+}

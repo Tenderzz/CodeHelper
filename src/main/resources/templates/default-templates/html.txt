@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><!--title--></title>
+<link rel="shortcut icon" href=""/>
+[hasComponent:
+<script src="/js/third-party/jquery.js"></script>
+]
+<!--css files-->
+<link rel="stylesheet" href="/css/<!--page-->.css" media="all">
+<body>
+    <!-- div -->
+    <script src="/js/third-party/require.js" data-main="/js/require.config"  id="current-page" current-page ="<!--page-->" target-module="<!--page-->" defer async="true" ></script>
+</body>
+</html>

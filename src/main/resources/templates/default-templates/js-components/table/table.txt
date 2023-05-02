@@ -1,0 +1,93 @@
+[html:
+<div class="table" id="<!--id-->" url="<!--url-->" pri-key="<!--prikey-->">
+    <div class="tablehead">
+        <!--heads-->
+    </div>
+    <div class="tablebody">
+    </div>
+</div>
+]
+
+[css:
+div.pagetable .tablehead, .tablehead{
+    font-size: 13px;
+    display: flex;
+    margin: 4px 0px;
+    border-radius: 4px;;
+    font-family: Lato-Bold;
+    color: #555;
+    line-height: 36px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #555;
+}
+
+div.pagetable .tablehead div.cell, .tablehead div.cell{
+    flex: auto;
+    padding-left: 3px;
+}
+
+div.pagetable .row, .row{
+    display: flex;
+    margin: 4px 0px;
+    border-radius: 4px;;
+    background: #f7f7f7;
+}
+
+div.pagetable .row div,  .row div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 32px;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px 0 rgb(255 255 255 / 90%);
+    padding: 0px 4px;
+    flex: auto;
+}
+
+div.pagetable .row:hover, .row:hover{
+    background-color: #FCF9EF;;
+}
+
+.page{
+    text-align: center;
+    line-height: 32px;
+    font-size: 13px;
+}
+
+.page div{
+    display: inline-block;
+    margin: 0px 4px;
+}
+
+div.paginationjs-pages ul li {
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+div.paginationjs-pages{
+    color: #343434;
+    font-family: Georgia, serif;
+}
+
+
+.paginationjs-go-input input{
+    width: 48px;
+    height: 28px;
+    outline: none;
+    text-align:center;
+}
+
+.paginationjs-go-button input{
+    height: 34px;
+}
+]
+
+[js:
+            this.tables = new table(this.container, this.ec).init();
+]
+
+[dependency:
+    table, eventcenter
+]

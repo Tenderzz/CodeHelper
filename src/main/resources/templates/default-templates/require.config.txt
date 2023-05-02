@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+require.config({
+
+  baseUrl: '/js/third-party',
+  paths: {
+
+    "jquery": "jquery",
+    //<!--third-party-->
+
+    //<!--component-->
+
+    //<!--pages-->
+
+  }, 
+
+  shim: {
+
+    //<!--shim-->
+
+  }
+
+});
+
+
+require(["jquery"], function ($) {
+
+    var currentPage = $("#current-page").attr("current-page");
+    var targetModule = $("#current-page").attr("target-module");
+    switch( targetModule ){
+    	//<!--page init-->
+    }
+    return;
+  });
+ 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <script src="js/third-party/jquery.js"></script>
+    <link rel="stylesheet" href="css/page/regist.css">
+</head>
+<body>
+<div class="regist">
+    <div class="regist-header">
+        <div class="content">
+            <div class="logo"><img src="img/logo.png"></div>
+            <div class="h3"><h3>欢迎注册</h3></div>
+            <div class="p">已有账号？<a href="index">去登陆</a></div>
+        </div>
+    </div>
+    <div class="regist-body">
+        <div class="regist-form">
+            <div class="form-input">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<input type="text" placeholder="account" id="input-acc"></div>
+            <div class="form-input">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="password" id="input-pwd"></div>
+            <div class="form-input">确认密码：<input type="password" placeholder="confirm password" id="input-con-pwd"></div>
+            <div class="form-input">用户昵称：<input type="text" placeholder="username" id="input-username"></div>
+            <div class="form-input">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" placeholder="email"id="input-email"></div>
+            <div class="regist-btn"><button >注册</button></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".regist-btn").click(function (){
+        var acc=$('#input-acc').val();
+        var pwd=$('#input-pwd').val();
+        var conpwd=$('#input-con-pwd').val();
+        var username=$('#input-username').val();
+        var email=$('#input-email').val();
+        var url="/user/regist";
+        var user =
+            {
+                "account": acc,
+                "password": pwd,
+                "username": username,
+                "email": email
+            };
+        if(acc===''||pwd===''||username===''||email===''){
+            alert("输入值不能为空！")
+        }
+        else if(pwd!=conpwd){
+            alert("两次密码不一致！请重新输入");
+        }
+        else if(pwd===conpwd){
+            $.post(
+                url,
+                user,
+                function(rst){
+                    if(rst.code===1){
+                        alert(rst.data);
+                        window.location.href = "index";
+                    }
+                    else{
+                        alert(rst.msg);
+                    }
+                }
+            )
+        }
+
+    })
+</script>
+</body>
+
+</html>

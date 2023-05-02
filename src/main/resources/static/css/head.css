@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    /*background: linear-gradient(200deg,#666666,#4E5465);*/
+    color: #000;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    background-color: #232324;
+    line-height: 64px;
+}
+
+.header-left {
+    position: relative;
+    margin-top: 5px;
+    height: 59px;
+}
+#header-left-a{
+    height: 59px;
+}
+.header-left .icon-rocket {
+    color: #FFFFFF;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 330px;
+}
+
+.header-left img {
+    padding-left: 92px;
+    padding-top: 3px;
+    height: 50px;
+}
+
+.header-right {
+    padding: 0 38px;
+}
+
+.header-right .user ul {
+    display: flex;
+}
+
+.header-right .user ul li,
+.header-right .user ul #pops #loginbutton {
+    height: 64px;
+    margin-right: 20px;
+    padding: 0 5px;
+}
+
+.header-right .user ul li:hover,
+.header-right .user ul #pops #loginbutton:hover {
+    background-color: #464649;
+
+}
+
+.header-right .user ul li a,
+.header-right .user ul #pops #loginbutton span {
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.head-bottom {
+    padding-bottom: 18.5px;
+    border-bottom: 3px solid white;
+}
+
+.header-right .user ul li p {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+#logout {
+    cursor: pointer;
+}

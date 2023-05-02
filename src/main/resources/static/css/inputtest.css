@@ -1,0 +1,213 @@
+#container{
+
+}
+.container{
+
+}
+#testform{
+
+}
+.testform{
+
+}
+
+div.button-icon{
+    display: inline-block;
+    cursor: pointer;
+}
+
+div.button-icon div.icon{
+    font-size: 24px;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-shadow: 1px 1px 0 rgb(255 255 255 / 90%);
+    color: #333;
+}
+
+div.button-icon span{
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+}
+span.icon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 28px;
+    color: #474747;
+}
+div.button span.icon{
+    width: 18px;
+    height: 24px;
+}
+div.button-big span.icon{
+    width: 24px;
+    height: 24px;
+}
+
+div.button {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #eee;
+    background-image: linear-gradient(#eee, #ddd);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%), inset 0 1px 1px rgb(255 255 255 / 60%);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgba(0,0,0,0.84);
+    text-shadow: 0 2px 0 rgb(255 255 255 / 60%);
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+}
+div.button-big i{
+    color: white;
+}
+
+div.button-big {
+    -webkit-appearance: none;
+    background-color: #C8252C;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 18px;
+    display: block;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+}
+div.button-small {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #e2e2e2;
+    border-radius: 2px;
+    height: 28px;
+    line-height: 28px;;  
+    color: #323232;
+    text-shadow: 1px 1px 0 rgb(255 255 255 / 90%);
+    font-size: 13px;
+    display: inline-block;
+    padding: 0px 4px;
+}
+
+div.form{
+    box-sizing: border-box;
+    padding: 16px;
+    margin: 6px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
+
+
+
+label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: #555;
+    line-height: 28px;
+    display: block;
+    text-align: right;
+}
+
+/*input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: none;
+    min-height: 38px;
+    line-height: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+    outline: none;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    box-sizing: border-box;
+}*/
+
+div.downlist{
+    position: relative;
+}
+
+div.downlist input{
+    cursor: pointer;
+}
+
+div.autolist{
+    position: absolute;
+    top: 42px;
+    z-index: 999;
+    border:1px solid #eee;
+    background-color: #eee;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 176px; 
+    overflow-y: scroll;
+}
+
+div.autolist>div{
+    cursor: pointer;
+    line-height: 28px;
+    color: #343434;
+    font-size: 12px;
+    padding-left: 6px;
+    margin: 4px;
+}
+
+div.autolist>div:hover{
+    border-bottom: 1px solid #aaa;
+    font-style: italic;
+}
+
+
+span.nocheck {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/img/s.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+span.checked {
+    background: url(/img/check-s.png) no-repeat center center;
+    background-size: cover;
+}
+
+
+div.datepacker {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: none;
+    min-height: 38px;
+    line-height: 38px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+    outline: none;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+

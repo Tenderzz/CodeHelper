@@ -1,0 +1,75 @@
+[html:
+<ul class="nav">
+    <!--items-->
+</ul>
+]
+
+[css:
+.nav{
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    white-space: nowrap;
+    overflow: visible;;
+    padding-right: 30px;
+    vertical-align: middle;
+}
+
+.nav::before{
+    content: " ";
+    display: table;
+}
+
+
+.nav > li {
+    float: left;
+    position: relative;
+    display: block;
+    border-radius: 2px 2px 0 0;
+    cursor: pointer;
+}
+
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    font-size: 13px;
+    display: block;
+    outline: none;
+    color: #337ab7;
+    text-decoration: none;
+    top: 2px;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.nav > li.active {
+    background: #fff;
+    position: relative;
+    border-color: #666;
+    font-weight: bold;
+}
+
+.nav li > a.active {
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.nav > li > a:hover:not(active) {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+]
+
+[js:
+            this.tab = new tab(this.container, this.ec).init();
+]
+
+[dependency:
+    tab, eventcenter
+]

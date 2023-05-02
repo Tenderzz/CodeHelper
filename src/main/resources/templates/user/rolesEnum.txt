@@ -1,0 +1,31 @@
+package <!--pack-->.entity;
+
+public enum UserRole {
+<!--roles-->
+
+	private int index;
+    private String roleName;
+
+    private UserRole(String roleName, int index) {
+        this.roleName = roleName;
+        this.index = index;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+
+    public void setRoleName(String roleName) {
+        this.roleName= roleName;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+}

@@ -1,0 +1,83 @@
+[html:
+    <div id="<!--id-->"  inputwidget="<!--type-->"  verifer="<!--verifer-->" data="<!--init value-->">
+        <input 
+            placeholder="<!--placeholder-->" 
+            value="<!--init value-->"
+        ></input>
+        <label><!--label--></label>
+    </div>
+]
+
+[css:
+label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: #555;
+    line-height: 28px;
+    display: block;
+    text-align: right;
+}
+
+input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: none;
+    min-height: 38px;
+    line-height: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+    outline: none;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.downlist{
+    position: relative;
+}
+
+div.downlist input{
+    cursor: pointer;
+}
+
+div.autolist{
+    position: absolute;
+    top: 42px;
+    z-index: 999;
+    border:1px solid #eee;
+    background-color: #eee;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 176px; 
+    overflow-y: scroll;
+}
+
+div.autolist>div{
+    cursor: pointer;
+    line-height: 28px;
+    color: #343434;
+    font-size: 12px;
+    padding-left: 6px;
+    margin: 4px;
+}
+
+div.autolist>div:hover{
+    border-bottom: 1px solid #aaa;
+    font-style: italic;
+}
+]
+
+
+[js:
+            //初始化输入组件
+            new inputwidgets(this.container).init();
+]
+
+[dependency:
+    inputwidgets,  eventcenter
+]

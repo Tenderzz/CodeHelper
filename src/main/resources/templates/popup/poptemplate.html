@@ -1,0 +1,33 @@
+<div>
+    <style>
+    .layui-layer{
+        border-radius: 10px;
+        height: 555px;
+        position: relative;
+        background-color: #f5f5f5;
+    }
+    </style>
+    <div style="overflow: hidden;">
+        <div id="popcontent">
+            <!--pop winds-->
+            <div th:if="${loginpop}" class="popcontent" title="">
+                <div th:include="/popup/loginpop" id="head"></div>
+            </div>
+        </div>
+
+<!--        <div id="footer" style="text-align:right;; margin-left: -16px;  padding:16px; background: #eee;">
+            &lt;!&ndash;footer buttons&ndash;&gt;
+            <span th:if="${loginpop}" id="confirm" class="cbutton">
+               <i class="fa fa-check" aria-hidden="true"></i>
+               <span>确认</span>
+           </span>
+            <span th:if="${loginpop}" id="cancel" class="cbutton">
+               <i class="fa fa-times" aria-hidden="true"></i>
+               <span>取消</span>
+           </span>
+
+
+        </div>-->
+    </div>
+
+</div>

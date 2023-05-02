@@ -1,0 +1,19 @@
+    @RequestMapping("<!--url-->")
+    @ResponseBody
+    public JSONObject <!--table-->DataSource(<!--params-->, 
+        @RequestParam int  pageSize,
+        @RequestParam int pageNumber
+    ){
+        JSONObject rst = new JSONObject();
+        JSONArray list = new JSONArray();
+
+        int total = 0;
+        int totalPage = 0;
+
+        rst.put("content", list);
+        rst.put("totalElements", total); //结果集总条数
+        rst.put("number",  pageNumber); //第几页
+        rst.put("size", pageSize); //页面大小
+        rst.put("totalPages", totalPage); //总页数
+        return rst;
+    }

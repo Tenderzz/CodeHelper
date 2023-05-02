@@ -1,0 +1,56 @@
+.middle {
+    background: url("/img/background.png") no-repeat;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+.middle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+.content .title{
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+}
+.content .sub_title{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+}
+.content .btns{
+    margin-top: 20px;
+}
+.content .btns button{
+    height: 50px;
+    width: 170px;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    margin:0 10px;
+    border:2px solid white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+}
+.content .btns button:hover{
+    background: white;
+    color: #000;
+}

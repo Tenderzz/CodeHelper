@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forgetpassword</title>
+    <script src="js/third-party/jquery.js"></script>
+    <link rel="stylesheet" href="css/page/forgetpwd.css">
+</head>
+<body>
+<div class="fgtpwd">
+    <div class="fgtpwd-header">
+        <div class="content">
+            <div class="logo"><img src="img/logo.png"></div>
+            <div class="h3"><h3>修改密码</h3></div>
+        </div>
+    </div>
+    <div class="fgtpwd-body">
+        <div class="fgtpwd-form">
+            <div class="form-input">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：<input type="text" placeholder="account" id="input-acc"></div>
+            <div class="form-input">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="text" placeholder="email"id="input-email"></div>
+            <div class="form-input">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="password" id="input-pwd"></div>
+            <div class="form-input">确认密码：<input type="password" placeholder="confirm password" id="input-con-pwd"></div>
+            <div class="fgtpwd-btn"><button>更新密码</button></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".fgtpwd-btn").click(function (){
+        var acc=$('#input-acc').val();
+        var pwd=$('#input-pwd').val();
+        var conpwd=$('#input-con-pwd').val();
+        var email=$('#input-email').val();
+        var url="/user/forget";
+        var user =
+            {
+                "account": acc,
+                "email": email,
+                "password": pwd
+            };
+        if(acc===''||pwd===''||email===''){
+            alert("输入值不能为空！")
+        }
+        else if(pwd!=conpwd){
+            alert("两次密码不一致！请重新输入");
+        }
+        else if(pwd===conpwd){
+            $.post(
+                url,
+                user,
+                function(rst){
+                    if(rst.code===1){
+                        alert(rst.data);
+                        window.location.href = "index";
+                    }
+                    else{
+                        alert(rst.msg);
+                    }
+                }
+            )
+        }
+
+    })
+</script>
+</body>
+
+</html>

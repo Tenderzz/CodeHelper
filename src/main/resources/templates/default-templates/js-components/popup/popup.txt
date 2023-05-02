@@ -1,0 +1,30 @@
+[html:
+    <!--只为了启动渲染-->
+]
+
+[css:
+]
+
+[js:
+            //初始化弹窗组件
+            //this.popup.pop()弹出弹窗,四个参数, id，弹窗组件ID， size宽度， mask, mask是JS数组, 前面是透明度，颜色，或者为""
+            //_that.popup.pop("secpop", "580", "");
+            this.popup = new pop(this.ec).init();
+]
+
+
+[event-regist:
+        //popButtionClick接收data参数，包含四个属性，分别是弹窗ID, 弹窗点击按键ID，弹窗对象layer，弹窗内容DOM
+        //关闭使用data.layer.close();
+        'popbuttion' : this.popButtionClick,
+]
+
+[event-resp:
+        this.popButtionClick = function( data ){
+            console.log(data);
+        }
+]
+
+[dependency:
+    pop, eventcenter
+]

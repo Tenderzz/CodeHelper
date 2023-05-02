@@ -1,0 +1,6 @@
+    @RequestMapping("<!--url-->")
+    @ResponseBody
+    public JSONArray <!--table-->DataSource(<!--params-->){
+        JSONArray rst = new JSONArray();
+        return rst;
+    }

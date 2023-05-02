@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/head.css">
+    <style>
+    </style>
+</head>
+<body>
+<nav class="header" th:fragment="head" >
+    <div class="header-left">
+        <a href="index">
+            <img src="img/logo.png" title="codehelper首页">
+            <div class="iconfont">
+                <div class="icon-rocket" title="开启代码生成之旅吧~"></div>
+            </div>
+        </a>
+    </div>
+
+    <div class="header-right">
+        <div class="user">
+            <ul>
+                <li><a href="code" id="code">生成代码</a></li>
+                <li><a href="help" id="help">帮助文档</a></li>
+                <li><a href="advice" title="为我们留下宝贵的意见吧~" id="advice">意见反馈</a></li>
+                <div id="pops" class="">
+                    <div id="loginbutton" title="">
+                        <span>登录/注册</span>
+                    </div>
+                </div>
+                <li class="username-li" style="display: none"><p id="username"></p></li>
+                <li class="username-li" style="display: none"><p id="logout">退出登录</p></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

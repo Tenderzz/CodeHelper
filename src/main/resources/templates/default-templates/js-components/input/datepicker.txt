@@ -1,0 +1,38 @@
+[html:
+    <div class="datepacker" id="<!--id-->"  data="" >
+        <!--placeholder-->
+    </div>
+]
+
+[css:
+div.datepacker {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: none;
+    min-height: 38px;
+    line-height: 38px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+    outline: none;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+]
+
+[stylesheet:
+<link href="/css/layui.css" rel="stylesheet" >
+]
+
+[js:
+            //初始化日期组件
+            new datepicker(this.container).init();
+]
+
+[dependency:
+    datepicker,  eventcenter
+]

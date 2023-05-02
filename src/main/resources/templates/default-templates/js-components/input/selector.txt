@@ -1,0 +1,31 @@
+[html:
+    <div class="selector" id="<!--id-->" type="<!--type-->">
+        <!--items-->
+    </div> 
+]
+
+[css:
+span.nocheck {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/img/s.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+span.checked {
+    background: url(/img/check-s.png) no-repeat center center;
+    background-size: cover;
+}
+]
+
+[js:
+            //初始化输入组件
+            new selector(this.container).init();
+]
+
+[dependency:
+    selector,  eventcenter
+]

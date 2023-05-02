@@ -1,0 +1,11 @@
+importr:
+  importr:
+    List: import java.util.List;
+    ArrayList: import java.util.ArrayList;
+    LinkedList: import java.util.LinkedList
+    Map: import java.util.Map;
+    HashMap: import java.util.HashMap;
+    Set: import java.util.Set;
+    HashSet: import java.util.HashSet;
+    File: import java.io.File;
+    Timestamp: import java.sql.Timestamp;

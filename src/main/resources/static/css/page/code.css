@@ -1,0 +1,727 @@
+input{
+    font-weight: 600;
+}
+input::placeholder{
+    font-weight: 500;
+}
+
+
+#code{
+    padding-bottom: 18px;
+    border-bottom: 3px solid white;
+
+}
+#advice{
+    border-bottom: none;
+}
+#help{
+    border-bottom: none;
+}
+.middle{
+    display: flex;
+}
+.side-left{
+    width: 250px;
+    height: 100vh;
+    border-right: 2px solid black;
+    box-shadow: 2px 0px 3px rgba(0,0,0,.5);
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side-left .proj{
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 30px;
+/*    color: rgba(0, 0, 0, 0.8);
+    font-size: 17px;
+    line-height: 30px;*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    /*设置文字超出部分省略号*/
+    white-space:nowrap;
+    word-break:keep-all;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.side-left .proj .delproj{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    height: 30px;
+    width: 1.5rem;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.side-left .proj .delproj:hover{
+    background-color: #18191c;
+    color: white;
+    cursor: pointer;
+
+}
+
+.side-left .proj .showproj{
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    top: 0px;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 8px;
+    padding-right: 8px;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    user-select:none;
+}
+.side-left .proj .showproj:hover{
+    background-color: #18191c;
+    color: white;
+}
+.side-left .proj .projname{
+    display: block;
+    padding-left: 5px;
+    width: 180px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    outline:none;
+    background-color: rgba(0, 0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.side-left #addproj{
+    width: 120px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.98);
+    margin-top: 20px;
+    border: 2px solid black;
+    padding:0 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 45px;
+    user-select:none;
+}
+#addproj:hover{
+    background-color: #18191c;
+    color: white;
+}
+.side-right{
+    height: 100vh;
+    flex: 1;
+}
+.left-footer{
+    display: flex;
+}
+.fanye{
+    width: 20px;
+    height: 20px;
+    margin: 20px 10px 0 5px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.fanye:hover{
+    background-color: black;
+    color: white;
+}
+#currentpage{
+    background-color: black;
+    color: white;
+}
+.side-right .nav{
+    display: flex;
+}
+.nav .item{
+    width: 100px;
+    height: 30px;
+    border: 0.5px solid black;
+    margin-right:  5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.nav .item::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: black;
+    transition: 0.3s;
+    position: absolute;
+}
+ .nav .active i{
+    color:white;
+    z-index: 1;
+}
+.nav .item i{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/*标签选中*/
+.nav .item.active::before{
+    width: 150%;
+    height: 150%;
+}
+
+.side-right .content section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    visibility: hidden;
+}
+
+.side-right .content .active{
+    visibility: visible;
+
+}
+
+/*project*/
+#codecontent #project,
+#codecontent #bean,
+#codecontent #page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+#codecontent #project >div,
+#codecontent #bean .beans >div,
+#codecontent #page .pages >div
+
+{
+    display: flex;
+    margin: 10px 0px 0px 15px;
+}
+#codecontent #project div p,
+#codecontent #bean .beans div p,
+#codecontent #page .pages div p{
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+#codecontent #project div input,
+#codecontent #bean .beans div input,
+#codecontent #page .pages div input{
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 13px;
+
+}
+
+
+
+/*Bean*/
+.beantitle{
+    font-size: 18px;
+    font-weight: 600;
+}
+#codecontent #bean .beans div .beanprops .beanprop,
+#codecontent #bean .beans div .beanfuns
+{
+    display: flex;
+}
+#codecontent #bean .beans div .beanprops input,
+#codecontent #bean .beans div .beanfuns input
+{
+    width: 100px;
+    margin-right: 10px;
+}
+#codecontent #bean .beans div .beanprops,
+#codecontent #bean .beans #propdiv,
+#codecontent #bean .beans #fundiv
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#codecontent #bean .beans #fundiv>div,
+#codecontent #bean .beans #propdiv>div{
+    display: flex;
+}
+.addprops,
+.addfuns
+{
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+    margin-left: 92px;
+    cursor: pointer;
+}
+.addcanshus{
+    width: 110px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.adduserroles{
+    width: 135px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+    cursor: pointer;
+}
+#addbean,
+#addbeanuser{
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+}
+#addbean:hover,
+.adduserroles:hover,
+#addbeanuser:hover,
+.addprops:hover,
+.addfuns:hover,
+.addcanshus:hover
+{
+    background-color: #18191c;
+    color: white;
+}
+.beanprop>.iconfont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beanfuns>select{
+    width: 95px;
+    height: 25px;
+}
+.beanfuns>.iconfont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 26px;
+}
+
+#codecontent #bean .beans div .beanprops .beanprop{
+    position: relative;
+}
+
+#codecontent #bean .beans #fundiv .beanfuns .funprops .funprop input{
+    margin: 3px 0px 3px 3px;
+}
+.delprop{
+    position: absolute;
+    left: -20px;
+    top: 3px;
+    cursor: pointer;
+}
+.delfunprop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    cursor: pointer;
+}
+#codecontent #bean .beans #fundiv .beanfuns .funprops .funprop{
+    display: flex;
+}
+.addcanshus{
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
+#codecontent #bean .beans #fundiv .allbeanfuns{
+    display: flex;
+    flex-direction: column;
+
+}
+.icon-chacha{
+    cursor: pointer;
+}
+.delbean{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deluserroles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rolediv,
+.alluserroles{
+    display: flex;
+    flex-direction: column;
+}
+.userroles{
+    margin-bottom: 3px;
+    display: flex;
+}
+
+/*Page*/
+.adddivs,
+.addforms{
+    margin-left: 30px;
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+}
+#addpage{
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 5px 0px 0px 10px;
+    user-select:none;
+    font-weight: 700;
+}
+.adddivs:hover,
+#addpage:hover,
+.addforms:hover,
+.addcomp:hover,
+.addtab-li:hover,
+.addnestedtab-li:hover,
+.addtabparam:hover,
+.addnestedtabparam:hover,
+.addtabhead:hover,
+.addnestedtabhead:hover,
+.addpagetabparam:hover,
+.addnestedpagetabparam:hover,
+.addpagetabhead:hover,
+.addnestedpagetabhead:hover,
+.addselector:hover,
+.addnestedselector:hover,
+.addmutiselector:hover,
+.addnestedmutiselector:hover,
+.addnesteddivs:hover,
+.addnestedcomp:hover,
+.addformcomp:hover{
+    background-color: #18191c;
+    color: white;
+}
+
+.pagediv>.iconfont{
+    display: flex;
+}
+.deldiv,
+.delform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divtitle{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pagediv,
+.pageform{
+    display: flex;
+    flex-direction: column;
+}
+.pagediv>div,
+.pageform>div{
+    display: flex;
+}
+.pages>iconfont{
+    display: flex;
+}
+.delpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3px;
+}
+.pagediv input,
+.pageform input{
+    width: 100px;
+    margin-right: 10px;
+}
+.yesno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+}
+.addcomp,
+.addformcomp{
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: 700;
+}
+.addnestedcomp{
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    margin-left: 2em;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: 700;
+}
+
+.componentselect,
+.formcomponentselect{
+    height: 25px;
+    margin-top: 1px;
+    margin-left: 16px;
+}
+.nestedcomponentselect{
+    height: 25px;
+    margin-top: 1px;
+    margin-left: 48px;
+}
+.delcomsel,
+.delformcomsel{
+    position: absolute;
+    top:4px;
+}
+.delnestedcomsel{
+    position: absolute;
+    top:4px;
+    left:30px
+}
+.comp,
+.nestedcomp,
+.formcomp{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.comps,
+.nestedcomps,
+.formcomps{
+    display: flex;
+    position: relative;
+}
+.popupcomp,
+.butcomp,
+.butsmacomp,
+.buticcomp,
+.butbigcomp,
+.uploadercomp,
+.downloadercomp,
+.tabcomp,
+.tablecomp,
+.pagetablecomp,
+.datepickercomp,
+.selectorcomp,
+.mutiselectorcomp,
+.editcomp,
+.nestedcomponent,
+.formcomponent{
+    display: flex;
+    margin-left: 5px;
+}
+.addpopbut{
+    cursor: pointer;
+    width: 110px;
+    height: 25px;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: 700;
+}
+.addnestedpopbut{
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: 700;
+}
+.popbutton,
+.nestedpopbutton{
+    display: flex;
+    flex-direction: column;
+}
+.popbuttonprops,
+.nestedpopbuttonprops{
+    display: flex;
+}
+.delpopbut,
+.delnestedpopbut
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addtab-li,
+.addnestedtab-li,
+.addtabhead,
+.addnestedtabhead,
+.addpagetabhead,
+.addnestedpagetabhead{
+    cursor: pointer;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+}
+.addtabparam,
+.addnestedtabparam,
+.addpagetabparam,
+.addnestedpagetabparam{
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+}
+.tablis,
+.nestedtablis,
+.tabheads,
+.nestedtabheads,
+.tabparams,
+.nestedtabparams,
+.pagetabheads,
+.nestedpagetabheads,
+.pagetabparams,
+.nestedpagetabparams{
+    display: flex;
+    flex-direction: column;
+}
+.tabli,
+.nestedtabli,
+.tabparam,
+.nestedtabparam,
+.tablehead,
+.nestedtablehead,
+.pagetabparam,
+.nestedpagetabparam,
+.pagetablehead,
+.nestedpagetablehead{
+    display: flex;
+}
+.deltabli,
+.delnestedtabli,
+.deltabparam,
+.delnestedtabparam,
+.deltablehead,
+.delnestedtablehead,
+.delpagetabparam,
+.delnestedpagetabparam,
+.delpagetablehead,
+.delnestedpagetablehead,
+.delsel,
+.delmsel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sel,
+.nestedsel,
+.msel,
+.nestedmsel{
+    display: flex;
+}
+.addselector,
+.addnestedselector,
+.addnestedmutiselector,
+.addmutiselector{
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    user-select:none;
+    font-weight: 700;
+}
+.addnesteddivs{
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: 700;
+}
+.nesteddivs{
+    display: flex;
+    flex-direction: column;
+}
+.nesteddiv{
+    display: flex;
+    flex-direction: column;
+}
+.nesteddivprops,
+.nesteddivhead{
+    display: flex;
+}
+.buttonform{
+    display: flex;
+}
+
+/*保存和生成按钮*/
+#tempsave{
+    width: 120px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.98);
+    margin-top: 20px;
+    border: 2px solid black;
+    padding:0 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 45px;
+    user-select:none;
+}
+#tempsave:hover{
+    background-color: #18191c;
+    color: white;
+}
+
+#gocode{
+    width: 120px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.98);
+    margin-top: 20px;
+    border: 2px solid black;
+    padding:0 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 45px;
+    user-select:none;
+}
+#gocode:hover{
+    background-color: #18191c;
+    color: white;
+}
+#tempershow{
+    width: 120px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.98);
+    margin-top: 20px;
+    border: 2px solid black;
+    padding:0 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 45px;
+    user-select:none;
+}
+#tempershow:hover{
+    background-color: #18191c;
+    color: white;
+}

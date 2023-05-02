@@ -1,0 +1,27 @@
+define(
+    [<!--import js-->],
+    function( <!--import js obj--> ){
+        function <!--page-->(container ){
+            this.name = "<!--page-->";
+            this.container = container;
+            var _that = this;
+
+            [hasevent:
+            this.ec = new eventcenter('debug');
+            this.ec.addHandler( this );
+            ]
+
+            this.init = function(){
+                <!--init components-->
+            }
+
+            <!--components response-->
+            
+        this.exports = {
+                <!--components regist-->
+        }
+            
+        }
+        return <!--page--> ;
+    }
+)

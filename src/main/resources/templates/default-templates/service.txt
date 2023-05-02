@@ -1,0 +1,36 @@
+package <!-- package -->;
+
+[haslist:
+import java.util.List;
+]
+
+
+[haspage: 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+]
+
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class <!--bean-->Service {
+    @Autowired
+    private <!--bean-->Reps reps;
+
+    public <!--bean--> save( <!--bean--> bean ){
+        return reps.save(bean);
+    };
+
+    public <!--bean--> findById(long id){
+        return reps.findById( id );
+    };
+
+    @Transactional
+    public void delete(long id){
+        reps.delete(id);
+    };
+
+<!--define fun-->
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>codehelper</title>
+    <link rel="stylesheet" href="css/page/advice.css">
+    <link rel="stylesheet" href="css/icon/iconfont.css">
+    <link rel="stylesheet" href="css/inputtest.css">
+    <link rel="stylesheet" href="css/head.css">
+
+    <link rel="shortcut icon" href=""/>
+    <script src="js/third-party/jquery.js"></script>
+    <!--css files-->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <style>
+    </style>
+</head>
+<body>
+<div th:replace="~{head::head}"></div>
+<div id="container" class="form">
+
+    <div class="editor" id="advice" height="240" >
+    </div>
+    <div class="button" title="感谢您的诚恳建议~" form-button>
+        <span class="icon"><i class="fa fa-paper-plane"></i></span><span id="advice-submit" >submit</span>
+    </div>
+</div>
+<script src="js/third-party/require.js" data-main="js/require.config" id="current-page" current-page="advice"
+        target-module="advice" defer async="true"></script>
+</body>
+</html>

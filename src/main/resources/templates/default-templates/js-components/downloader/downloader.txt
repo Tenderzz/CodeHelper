@@ -1,0 +1,9 @@
+[js:
+        //初始化下载组件，使用down方法下载，参数1为下载文件URL，2为下载文件名
+        this.downloader = new downloader();
+
+]
+
+[dependency:
+    downloader
+]

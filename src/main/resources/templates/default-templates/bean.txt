@@ -1,0 +1,45 @@
+<!-- package -->
+
+[hastimestamp:
+import java.sql.Timestamp;
+import org.springframework.data.annotation.CreatedDate;
+]
+
+[hastable:
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+]
+[hasTransient:
+import javax.persistence.Transient;
+]
+
+[hasColDef:
+import javax.persistence.Column;
+]
+<!-- imports -->
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+[hastable:
+@Entity
+@Table(name = "<!--table name -->")
+]
+public class <!-- bean name -->{
+    [hastable:
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    ]
+
+    <!-- attributes -->
+
+}

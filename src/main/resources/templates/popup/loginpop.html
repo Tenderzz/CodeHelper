@@ -1,0 +1,147 @@
+<div th:fragment="loginpop">
+    <style>
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        #login-form .close a{
+            color: #000;
+            position: absolute;
+            top: 0;
+            right: 4px;
+            text-decoration: none;
+        }
+        .login-logo img {
+            width: 15%;
+        }
+
+        .login-logo {
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+        }
+
+        .login-logo,
+        .login-box-top,
+        .login-box-foot {
+            text-align: center;
+        }
+
+        #login-form a {
+            color: #35339a;
+            text-decoration: none;
+        }
+
+        #login-form a:hover {
+            text-decoration: underline;
+        }
+
+        .login-box-top {
+            margin-bottom: 2rem;
+        }
+
+        .login-box-top h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+
+        .login-box-top h1 + div {
+            font-size: calc(1rem * .8);
+            opacity: .8;
+        }
+
+        .login-box-middle {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .login-box-middle .input-item {
+            position: relative;
+        }
+
+        .login-box-middle .input-item .item-icon {
+            position: absolute;
+            top: .82rem;
+            left: 1.4rem;
+            font-size: 1.3rem;
+            opacity: .4;
+        }
+
+        .login-box-middle .other-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: calc(1rem * .8);
+            margin-bottom: .5rem;
+        }
+
+        .login-box-middle input[type="text"],
+        .login-box-middle input[type="password"] {
+            border: none;
+            outline: none;
+            background: rgba(66, 66, 66,0.05);
+            padding: 1rem 3rem;
+            margin-left: 2rem;
+            border-radius: 100px;
+            width: 80%;
+        }
+        .item-icon{
+            margin-left: 2rem;
+        }
+        .login-box-middle input:focus{
+            background-color: #fff;
+        }
+        .login-box-middle .other-item{
+            margin-right: 3rem;
+        }
+        .cbutton button{
+            background-color: black;
+            color: white;
+            padding: 1rem;
+            margin: 2rem;
+            border-radius: 100px;
+            letter-spacing: 2px;
+            width: 85.7%;
+        }
+        .cbutton button:hover{
+            background-color: rgba(0,0,0,.8);
+            cursor: pointer;
+        }
+
+    </style>
+    <div id="login-form">
+        <div class="close"><a href="javascrip:">x</a></div>
+        <div class="login-logo">
+            <img src="img/snow.png">
+        </div>
+        <div class="login-box-top">
+            <h1>Sign In</h1>
+            <div>Please login to use Codehelper</div>
+        </div>
+        <div class="login-box-middle">
+            <div class="input-item">
+                    <span class="iconfont">
+                        <span class=" item-icon icon-youxiang"></span>
+                    </span>
+                <input id="input-account" type="text" placeholder="account" class="input-box">
+            </div>
+            <div class="input-item">
+                    <span class="iconfont">
+                        <span class=" item-icon icon-24gl-lock2"></span>
+                    </span>
+                <input id="input-password" type="password" placeholder="password" class="input-box">
+            </div>
+            <div class="other-item">
+                <a href="forgetpwd">forget password? </a>
+            </div>
+        </div>
+        <span th:if="${loginpop}" id="confirm" class="cbutton">
+                <button>SIGN IN</button>
+        </span>
+        <div class="login-box-foot" id="foot">
+            Don't have an account?<a href="regist">Create a free account</a>
+        </div>
+    </div>
+</div>

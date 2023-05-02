@@ -1,0 +1,22 @@
+[html:
+    <div class="editor" id="<!--id-->"  height="<!--height-->" >
+    </div>
+]
+
+[js:
+            //初始化编辑器
+            new editor(this.container, this.ec).init();
+]
+
+[dependency:
+    editor
+]
+
+[event-resp:
+        this.editorChange = function( data ){
+            console.log(data);
+        }
+]
+[event-regist:
+        'editorchanged' : this.editorChange,
+]
